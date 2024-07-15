@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+    background-color: #fceefb;
+}
+p{
+    font-style:initial;
+    font-weight: 800;
+    font-size:xx-large;
+    text-align: center;
+    padding: 5px
+
+}
+img{
+    background-color: rgb(19, 69, 112);
+    margin-left: 45%;
+    width: 100px;
+}
+#id{
+    text-align: center;
+    
+}
+#ordetail{
+    text-align: center;
+    font-size: large;
+    margin-bottom: 80px;
+}
+#Thank{
+    text-align: center;
+}
+button{
+    height: 40px;
+    margin-left:42%;
+    background-color:orangered;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" type="image/png" href="data:image/png;base64,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" sizes="64x64">
+ 
+    <title>Bag</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* div {
+        border: 1px solid red;
+      } */
+      li {
+        color: grey;
+      }
+      a {
+        color: #ff3f6c;
+        text-decoration: none;
+      }
+      /* img {
+        height: 500px;
+      } */
+      .border {
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 15px;
+      }
+      .spaceEven {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .flexThis {
+        display: flex;
+        justify-content: space-between;
+        /* padding: 10px; */
+      }
+      .donationCash {
+        border: 1px solid lightgray;
+        padding: 5px;
+        width: 17%;
+        border-radius: 50px;
+        text-align: center;
+        color: black;
+        background-color: white;
+      }
+
+      .donationCash:nth-child(4) {
+        /* margin: auto; */
+        text-decoration-color: black;
+        font-weight: 400;
+        width: 20%;
+      }
+      .invisiblebtn {
+        border: 0px;
+        background-color: white;
+        font-weight: 500;
+        font-size: small;
+      }
+      .redbtn {
+        background-color: white;
+        color: #ff3f6c;
+        border: 2px solid #ff3f6c;
+        border-radius: 5px;
+      }
+      .closerDivs {
+        height: 0px;
+      }
+      .bigRedBtn {
+        width: 90%;
+        /* margin-left: 5%; */
+        margin-top: 20px;
+        height: 40px;
+        background-color: #ff3f6c;
+        color: white;
+        border: 0px;
+        border-radius: 3px;
+      }
+      .bottomBagNavbar {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 65%;
+        margin-top: 70px;
+      }
+      .bottomBagNavbar > div > img {
+        height: 30px;
+      }
+      #helpInFightCOVID {
+        display: flex;
+        /* justify-content: space-evenly; */
+      }
+      #discount {
+        color: #22aca5;
+      }
+      #topBagNavbar {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        padding: 10px;
+        vertical-align: middle;
+      }
+      #topBagNavbar > img {
+        height: 80%;
+      }
+
+      #sale {
+        text-align: center;
+      }
+      #bagBody {
+        display: flex;
+        width: 60%;
+        margin: auto;
+      }
+      #bagLeft {
+        width: 60%;
+
+        /* font-size: x-small; */
+      }
+      #bagRight {
+        border-left: 1px solid rgb(206, 206, 206);
+        width: 40%;
+        padding-left: 20px;
+        margin-left: 3%;
+      }
+      #bagPin {
+        line-height: 0px;
+        height: 30px;
+        border: 2px solid #ff3f6c;
+        color: #ff3f6c;
+        background-color: white;
+        border-radius: 3px;
+      }
+      #roundButtons > div {
+        border: 1px solid black;
+        border-radius: 20px;
+        min-width: 50px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      #pqr{
+        height: 40px; width: 30px;
+        margin-left: 20px;
+      }
+
+      #img101{
+        height:40px;
+        width:50px;
+      }
+      #securelogo{
+    display: flex;
+    width: 190px;
+    height: 35px;
+    flex-direction: row;
+    margin-left: 83%;
+    margin-top: -80px;
+   justify-content: center;
+   justify-content:flex-end;
+   
+}
+.securetext{
+    float: right;
+    letter-spacing: 1px;
+    color:#535766;
+    padding: 10px;
+  margin: 0 20px 0 0;
+ font-size: 10px;
+ font-weight: 600;
+ 
+}
+      @media only screen and (max-width: 900px){
+
+/* div {
+        border: 1px solid red;
+      } */
+      li {
+        color: grey;
+      }
+      a {
+        
+        color: #ff3f6c;
+        text-decoration: none;
+      }
+      /* img {
+        height: 500px;
+      } */
+
+      .border {
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 15px;
+      }
+      .spaceEven {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .flexThis {
+        display: flex;
+        justify-content: space-between;
+        /* padding: 10px; */
+      }
+      .donationCash {
+        border: 1px solid lightgray;
+        padding: 5px;
+        width: 40%;
+        border-radius: 50px;
+        text-align: center;
+        color: black;
+        background-color: white;
+        font-size: x-small;
+      }
+
+      .donationCash:nth-child(4) {
+        /* margin: auto; */
+        text-decoration-color: black;
+        font-weight: 400;
+        width: 20%;
+      }
+      .invisiblebtn {
+        border: 0px;
+        background-color: white;
+        font-weight: 500;
+        font-size: small;
+      }
+      .redbtn {
+        background-color: white;
+        color: #ff3f6c;
+        border: 2px solid #ff3f6c;
+        border-radius: 5px;
+        font-size: smaller;
+        height: 30px;
+        margin-top:10px ;
+      }
+      .closerDivs {
+        height: 0px;
+      }
+      .bigRedBtn {
+        width: 90%;
+        /* margin-left: 5%; */
+        margin-top: 20px;
+        height: 40px;
+        font-size: small;
+        background-color: #ff3f6c;
+        color: rgb(255, 255, 255);
+        border: 0px;
+        border-radius: 3px;
+        
+      }
+      .bottomBagNavbar {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 65%;
+        margin-top: 70px;
+      }
+      .bottomBagNavbar > div > img {
+        height: 30px;
+      }
+      #helpInFightCOVID {
+        display: flex;
+        /* justify-content: space-evenly; */
+      }
+      #discount {
+        color: #22aca5;
+      }
+      #topBagNavbar {
+       
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        padding: 10px;
+        vertical-align: middle;
+      }
+      #topBagNavbar > img {
+        
+        height: 80%;
+      }
+
+      #sale {
+        border: 2px solid rgb(9, 232, 46);
+        text-align: center;
+      }
+      #bagBody {
+       
+        display: flex;
+        width: 60%;
+        margin: auto;
+      }
+      #bagLeft {
+       
+        width: 60%;
+        padding-left: 30px;
+        margin-left: 3%;
+        /* font-size: x-small; */
+      }
+      #bagRight {
+       
+        border-left: 1px solid rgb(206, 206, 206);
+        width: 60%;
+        padding-left: 40px;
+        margin-left: 3%;
+      }
+      #bagPin {
+       
+
+        line-height: 0px;
+        height: 30px;
+        border: 2px solid #ff3f6c;
+        color: #ff3f6c;
+        background-color: white;
+        border-radius: 3px;
+        font-size: small;
+        width: 100px;
+      }
+      #roundButtons > div {
+        
+        border: 1px solid #ff3f6c;
+        border-radius: 10px;
+        min-width: 50px;
+        text-align: center;
+        padding: 5px;
+        height: 50px;
+        font-size: x-small;
+        justify-content:center;
+        
+      }
+
+      #pqr{
+        height: 40px; width: 30px;
+        margin-left: 20px;
+      }
+
+      #img101{
+        height:40px;
+        width:50px;
+      }
+      
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="navbar"></div> -->
+    <!-- <h1 id="sale">Sale ends in: (timer)</h1> -->
+    <div id="topBagNavbar" style="overflow: hidden">
+    <a id="pqr"  href="index.html"><img  id="img101"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS357fHYAnvyZIqrnolaRs3MlCQO7PyKngEag&usqp=CAU" alt="" /></a>
+      <img style="height: 70px" src="../scripts/top bag.PNG" alt="" />
+    </div>
+    <div id="securelogo">
+      <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png">
+      <p class="securetext">1 0 0 % S E C U R E</p>
+  </div>
+    <div id="bagBody">
+      <div id="bagLeft">
+        <div
+          class="flexThis"
+          style="
+            border: 1px solid rgb(193, 193, 193);
+            margin-bottom: 30px;
+            height: 60px;
+            padding: 15px;
+            border-radius: 5px;
+          "
+        >
+          <h6>Deliver to: 560064</h6>
+          <button id="bagPin">Change</button>
+        </div>
+        <div class="border">
+          <span><i class="fa-solid fa-badge-percent"></i></span>
+          <h6>Available Offers</h6>
+          <ul>
+            <li>
+              10% Instant Discount on American Express Cards on a min spend of
+              Rs 3,500 TCA
+            </li>
+            <li>
+              10% Instant Discount on Kotak Credit and Debit cards on a min
+              spend of Rs 3,000 TCA
+            </li>
+            <li>5% Unlimited Cashback on Flipkart Axis Bank Credit Card TCA</li>
+            <li>
+              10% Cashback upto Rs 100 on Paytm Postpaid transaction on a min
+              spend of Rs 1000 TCA
+            </li>
+            <li>
+              15% Cashback upto Rs 150 on Freecharge Paylater transaction TCA
+            </li>
+            <li>
+              10% Cashback upto Rs 200 on Ola Money Postpaid or wallet or
+              transaction on a min spend of Rs 1000 TCA
+            </li>
+            <li>
+              Upto Rs 500 Cashback on Mobikwik Wallet Transactions on a min
+              spend of Rs 999. Use code MBK500 on Mobikwik TCA
+            </li>
+            <li>
+              5% Cashback upto Rs 1550 on a minimum spend of Rs 1,500 with
+              PayZappTCA
+            </li>
+          </ul>
+        </div>
+        <div class="border" style="margin-top: 30px; margin-bottom: 30px">
+          <h6>Yay! No covenience fee on this order</h6>
+        </div>
+        <div class="flexThis">
+          <div id="numberOfItems"></div>
+          <div
+            style="width: 45%; display: flex; justify-content: space-between"
+          >
+            <button class="invisiblebtn" onclick="removeElement">REMOVE</button>
+            <button class="invisiblebtn" onclick="moveToWishlist">
+              MOVE TO WISHLIST
+            </button>
+          </div>
+        </div>
+        <div id="appendBag" class="border" style="margin-bottom: 30px"></div>
+        <div class="border">
+          <button
+            class="invisiblebtn"
+            onclick="window.location.href = 'wishlist.html'"
+          >
+            Add More From Wishlist
+          </button>
+        </div>
+      </div>
+      <div id="bagRight">
+        <h6>DONATE FOR COVID-19 RELIEF</h6>
+        <div id="helpInFightCOVID">
+          <input type="checkbox" style="margin-top: 5px; margin-left: 5px" />
+
+
+          <h6 style="margin-left: 10px">Help India fight COVID-19</h6>
+        </div>
+        <div id="donate" class="spaceEven">
+          <button class="donationCash">₹10</button>
+          <button class="donationCash">₹50</button>
+          <button class="donationCash">₹100</button>
+          <input
+            type="number"
+            class="donationCash"
+            placeholder="Other"
+            style="width: 25%"
+          />
+        </div>
+        <a href=""> Know More </a>
+        <br />
+        <h6 style="margin-top: 30px">COUPONS</h6>
+        <div class="flexThis">
+          <h6>Apply Coupons</h6>
+          <button class="redbtn">APPLY</button>
+        </div>
+        <h6 style="margin-top: 40px">PRICE DETAILS</h6>
+        <div class="flexThis" class="closerDivs">
+          <p>Total MRP</p>
+          <p id="totalActual"></p>
+        </div>
+        <div class="flexThis" class="closerDivs">
+          <p>Discount on MRP</p>
+          <p id="discount"></p>
+        </div>
+        <div class="flexThis" class="closerDivs">
+          <p>Coupon Discount</p>
+          <p>Apply Coupon</p>
+        </div>
+        <div
+          class="flexThis"
+          class="closerDivs"
+          style="border-bottom: 1px solid grey; margin-bottom: 30px"
+        >
+          <p>Convenience Fee <a href="">Know more</a></p>
+          <div class="flexThis">
+            <p style="text-decoration: line-through">₹99</p>
+            <p style="color: #22aca5">FREE!</p>
+          </div>
+        </div>
+        <div class="flexThis">
+          <h6>Total Amount</h6>
+          <h6 id="total"></h6>
+        </div>
+        <a href="Daddress.html" >
+        <button
+          class="bigRedBtn"
+          onclick="window.location.href = '#'; "
+        >
+          PLACE ORDER
+        </button>
+      </div>
+    </div>
+    <br />
+    <h5 style="margin-left: 20%">You may also like:</h5>
+    <div id="roundButtons" class="flexThis" style="width: 60%; margin: auto">
+      <div>All</div>
+      <div>Hair Accessory</div>
+      <div>Belts</div>
+      <div>Perfume And Body Mist</div>
+      <div>Headband</div>
+      <div>Shaving Brush & Razor</div>
+      <div>Mascara</div>
+      <div>Gloves</div>
+    </div>
+    <div class="bottomBagNavbar">
+      <div>
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
+          alt=""
+        />
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
+          alt=""
+        />
+      </div>
+      <div><h6>Need Help? Contact Us</h6></div>
+    </div>
+  </body>
+</html>
+<script>
+
+let cartGo = JSON.parse(localStorage.getItem("cartGo"));
+// console.log(cartGo)
+
+let totalPrice = cartGo.reduce(function (acc, elem) {
+  return acc + Number(elem.price);
+}, 0);
+
+let totalActual = cartGo.reduce(function (acc, elem) {
+  return acc +Number(elem.MP) ;
+}, 0);
+
+let discount = totalActual - totalPrice;
+console.log(totalPrice, discount, totalActual);
+
+let priceobj = {
+  totalPrice: totalPrice,
+  totalActualPrice: totalActual,
+  discount: discount,
+};
+
+localStorage.setItem("totalPriceInfo", JSON.stringify(priceobj));
+// console.log(priceobj);
+// }
+
+let nums = cartGo.length;
+let titleDiv = document.createElement("div");
+let titleWish = document.createElement("h6");
+titleWish.innerText = "ITEMS";
+let num = document.createElement("h6");
+// num.style.lineHeight = "20px";
+titleWish.style.marginLeft = "10px";
+num.innerText = `${nums} `;
+titleDiv.append(num, titleWish);
+titleDiv.style.display = "flex";
+document.getElementById("numberOfItems").append(titleDiv);
+
+// document.getElementById("totalMrp").innerText = "";
+// document.getElementById("totalMrp").innerText = `₹ ${totalPrice}`;
+// localStorage.setItem("totalprice", JSON.stringify(totalPrice));
+let editCart = [];
+
+cartGo.map((elem, index) => {
+  let box = document.createElement("div");
+  let boxLeft = document.createElement("div");
+  let boxRight = document.createElement("div");
+  box.style.minHeight = "160px";
+  box.style.minWidth = "auto";
+  box.style.marginTop = "15px";
+  box.style.padding = "10px";
+  boxRight.style.marginLeft = "20px";
+  box.style.border = "1px solid grey";
+  box.style.borderRadius = "5px";
+
+  // let select = document.createElement("input");
+  // select.type = "checkbox";
+  // select.style.position = "relative";
+  // select.style.bottom = "50px";
+  // select.addEventListener("click", function () {
+  //   editCart.push(elem, index);
+  //   console.log(editCart);
+  // });
+
+  let img = document.createElement("img");
+  img.src = elem.image;
+  img.style.maxHeight = "90%";
+  img.style.width = "auto";
+
+  let brand = document.createElement("h6");
+  brand.innerText = elem.brand;
+
+  // let closeDiv = document.createElement("div");
+  // let closeX = document.createElement("button");
+  // closeX.innerText = "X";
+  // closeX.style.backgroundColor = "white";
+  // closeX.style.border = "0px";
+
+  let name = document.createElement("p");
+  name.innerText = elem.type;
+  name.style.fontSize = "small";
+  name.style.fontWeight = "400";
+  name.style.lineHeight = "30px";
+
+
+  let remove = document.createElement("button");
+  remove.className = "invisiblebtn";
+  remove.innerText = "REMOVE";
+  remove.style.fontSize = "small";
+  remove.addEventListener("click", function () {
+    removeElement(elem, index);
+  });
+
+
+
+  let nameButtonDiv = document.createElement("div");
+  // nameButtonDiv.style.border = "1px solid red";
+  nameButtonDiv.style.display = "flex";
+  nameButtonDiv.style.justifyContent = "space-evenly";
+  nameButtonDiv.style.width = "100%";
+  nameButtonDiv.style.height = "30px";
+
+  nameButtonDiv.append(name, remove);
+  // let merchant = document.createElement("p");
+  // merchant.innerText = elem.merchant;
+  // merchant.style.fontSize = "x-small";
+  // merchant.style.lineHeight = "0px";
+
+  let size = document.createElement("button");
+  size.style.backgroundColor = "#f4f4f5";
+  size.style.border = "0px";
+  size.style.borderRadius = "5px";
+  // size.style.fontSize = "";
+  size.innerText = "Size: Onesize";
+
+  let qty = document.createElement("select");
+  qty.innerText = `QTY: 1`;
+  let one = document.createElement("option");
+  one.innerText = "1";
+  let two = document.createElement("option");
+  two.innerText = "2";
+  let three = document.createElement("option");
+  three.innerText = "3";
+  let four = document.createElement("option");
+  four.innerText = "4";
+  let five = document.createElement("option");
+  five.innerText = "5";
+  qty.append(one, two, three, four, five);
+
+  let sizeDiv = document.createElement("div");
+  sizeDiv.append(size, qty);
+  sizeDiv.style.display = "flex";
+  sizeDiv.style.justifyContent = "space-between";
+
+  let price = document.createElement("h6");
+  price.innerText =`₹  ${elem.price}`;
+  price.style.fontSize = "85%";
+
+  let MP = document.createElement("p");
+  MP.innerText =`₹ ${elem.MP}`;
+  MP.style.color = "grey";
+  MP.style.textDecoration = "line-through";
+  MP.style.fontSize = "85%";
+  // console.log(MP);
+
+
+  
+
+  let offer = document.createElement("p");
+  offer.innerText = `${elem.offer}% OFF`;
+  offer.style.color = "#ff3f6c";
+  offer.style.fontSize = "85%";
+
+  let priceDiv = document.createElement("div");
+  priceDiv.style.display = "flex";
+  // priceDiv.style.border = "1px solid red";
+  priceDiv.style.justifyContent = "space-evenly";
+  priceDiv.style.height = "30px";
+
+  priceDiv.style.marginTop = "15px";
+
+  priceDiv.append(price, MP, offer);
+
+  let deliveryDate = document.createElement("p");
+  deliveryDate.style.fontSize = "x-small";
+  deliveryDate.innerText = "Delivery by: 7 May 2022";
+
+  boxLeft.append(img);
+  boxRight.append(brand, nameButtonDiv, sizeDiv, priceDiv, deliveryDate);
+  box.style.display = "flex";
+  box.style.height = "100px";
+  box.append(boxLeft, boxRight);
+  document.getElementById("appendBag").append(box);
+});
+
+// function removeElement(editCart) {
+//   for (let i = 0; i < editCart.length; i++) {
+//     let elem = editCart[i];
+//   }
+// }
+let priceData = JSON.parse(localStorage.getItem("totalPriceInfo"));
+console.log(priceData);
+ totalActual = priceData.totalActualPrice;
+ totalPrice = priceData.totalPrice;
+ discount = priceData.discount;
+
+
+document.getElementById("totalActual").innerText = `₹ ${totalActual}`;
+document.getElementById("total").innerText = `₹ ${totalPrice}`;
+document.getElementById("discount").innerText = `₹ ${discount}`;
+
+
+
+function removeElement(elem, index) {
+  cartGo.splice(index, 1);
+  localStorage.setItem("cartGo", JSON.stringify(cartGo));
+  nums = cartGo.length;
+  let titleDiv = document.createElement("div");
+  let titleWish = document.createElement("h6");
+  titleWish.innerText = "ITEMS";
+  let num = document.createElement("h6");
+  // num.style.lineHeight = "20px";
+  titleWish.style.marginLeft = "10px";
+  num.innerText = `${nums} `;
+  titleDiv.append(num, titleWish);
+  titleDiv.style.display = "flex";
+  document.getElementById("numberOfItems").append(titleDiv);
+  window.location.reload();
+}
+</script>
