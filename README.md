@@ -11,7 +11,7 @@ Employ AI-driven recommendation systems that analyze current fashion trends, cus
 To enhance the shopping experience, we can develop Snapchat filters that allow users to virtually try on new items.
 
 # Chatbot
-
+We've built a chatbot using IBM Watson and integrated it into a Myntra clone. It interacts with users, helping them find products, get recommendations, and provide support, enhancing their shopping experience.
 
 # You Tube Data Analysis And Recommendation
-We've developed a YouTube recommendation system that gathers data specifically tagged with "Myntra" from the YouTube Data API. This data is then stored, cleaned, and processed in a PostgreSQL database using Python and data science techniques. The system utilizes this processed data to recommend videos related to Myntra to users, enhancing their engagement with content relevant to the brand.
+This project leverages YouTube data and machine learning to create a personalized recommendation system.It aims to boost user interaction with Myntra through strategic video content recommendations, enhancing overall user experience and engagement.
